@@ -1,4 +1,3 @@
-
 /* Base styles */
 html, body {
     margin: 0;
@@ -27,7 +26,7 @@ html, body {
 }
 
 .fullscreen-bg:hover .background-container {
-    filter: blur(5px)grayscale(100); /* Apply blur on hover */
+    filter: blur(5px) grayscale(100); /* Apply blur on hover */
 }
 
 .overlay-container {
@@ -45,11 +44,18 @@ html, body {
 .logo {
     opacity: 0;
     transition: opacity 1s ease;
-    width: 800px;
+    max-width: 80%; /* Adjust the size for smaller screens */
     height: auto;
-
 }
 
 .overlay-container:hover .logo {
     opacity: 1;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    /* Adjustments for smaller screens */
+    .logo {
+        max-width: 90%; /* Further reduce size for very small screens */
+    }
 }
