@@ -1,0 +1,53 @@
+/* style.css */
+
+/* Base styles */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.fullscreen-bg {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fullscreen-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the whole screen */
+    filter: blur(0); /* Initially no blur */
+    transition: filter 1.5s ease; /* Smooth transition for the blur effect */
+}
+.fullscreen-bg:hover img {
+    filter: blur(5px); /* Apply blur on hover */
+}
+
+.overlay-text {
+    opacity: 0; /* Initially hide the text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgb(0, 0, 0); /* Text color */
+    transition: opacity 1.5s ease; /* Transition effect */
+}
+
+.fullscreen-bg:hover .overlay-text {
+    opacity: 1; /* Show the text on hover */
+}
+
+.overlay-text h1 {
+    font-size: 20vw; /* Responsive font size */
+    margin-bottom: 10px; /* Adjust spacing */
+}
+
+.overlay-text p {
+    font-size: 3vw; /* Responsive font size */
+}
